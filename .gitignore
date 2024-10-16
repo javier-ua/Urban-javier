@@ -8,6 +8,8 @@ media/
 staticfiles/
 *.sqlite3
 *.bak
+settings.py
+urls.py
 
 # Python
 *.py[cod]
