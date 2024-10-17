@@ -20,5 +20,8 @@ from loginapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('usuarios/', views.ListaUsuarios.as_view(), name='ListaUsuarios'),
+    path('usuarios/', views.ListaCreaUsuarios.as_view(), name='lista_usuarios'), #localhost:8000/usuarios para crear y mostrar usuarios
+    path('usuarios/<int:pk>/', views.RUDUsuario.as_view(), name='detalle_usuario'), #localhost:8000/usuarios/<ID del user a modificar>
+    path('roles/', views.ListaCreaRoles.as_view(), name='lista_roles'), # localhost:8000/roles para crear y mostrar roles
+    path('roles/<str:rol>/', views.RUDRoles.as_view(), name='detalle_rol'), # localhost:8000/roles/<ID del rol a modificar>
 ]
